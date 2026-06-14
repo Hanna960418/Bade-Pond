@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互動任務 - 八德埤塘導覽</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; line-height: 1.7; }
+        header { background-color: #2e7d32; color: white; text-align: center; padding: 2em 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 2em; letter-spacing: 1px; }
+
+        /* 統一導覽列 */
+        nav { background-color: #1b5e20; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li { position: relative; }
+        nav a { display: block; color: white; padding: 16px 22px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav a:hover { background-color: #4caf50; }
+        nav ul ul { display: none; position: absolute; background-color: #1b5e20; min-width: 180px; flex-direction: column; }
+        nav ul ul a { padding: 12px 20px; font-size: 0.95em; }
+        nav ul li:hover > ul { display: flex; }
+
+        main { max-width: 900px; margin: 40px auto; padding: 40px; background-color: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h2 { color: #2e7d32; border-bottom: 3px solid #81c784; padding-bottom: 10px; display: inline-block; }
+        .content-box { background-color: #e8f5e9; padding: 25px; border-left: 6px solid #2e7d32; border-radius: 4px; margin: 25px 0; }
+        .highlight { font-weight: bold; color: #1b5e20; }
+        .text-section { margin-bottom: 30px; }
+        .text-section h3 { color: #1b5e20; }
+        .quote-box { background-color: #f9f9f9; border-left: 4px solid #999; padding: 15px 20px; font-style: italic; color: #666; margin: 20px 0; }
+        footer { background-color: #1b5e20; color: white; text-align: center; padding: 20px 0; margin-top: 60px; }
+        a.back-home { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 4px; transition: 0.3s; }
+        a.back-home:hover { background-color: #1b5e20; }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>🎮 互動導覽任務</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 關於本站</a></li>
+            <li><a href="pondMap.html">埤塘地圖</a></li>
+            <li><a href="hydrologySystem.html">地景與水利</a></li>
+            <li><a href="ecologicalSurvey.html">生態調查 ▼</a>
+                <ul>
+                    <li><a href="floraAndFauna.html">動植物紀錄</a></li>
+                    <li><a href="waterQualityIndicator.html">昆蟲與水質指標</a></li>
+                </ul>
+            </li>
+            <li><a href="historyCulture.html">歷史與文化</a></li>
+            <li><a href="environmentalChange.html">變遷與現狀</a></li>
+            <li><a href="interactiveGuide.html">互動任務</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>實地觀察挑戰</h2>
+        <p>完成下方任務，測試你對八德埤塘的理解！作答後點按鈕看結果。</p>
+
+        <div class="content-box">
+            <h3 style="margin-top:0;">🎯 任務一：水從哪來？</h3>
+            <p>八德埤塘生態公園的水源，主要引灌自哪個系統？</p>
+            <button class="quiz-btn" onclick="check(this,true)">石門大圳系統</button>
+            <button class="quiz-btn" onclick="check(this,false)">嘉南大圳系統</button>
+            <button class="quiz-btn" onclick="check(this,false)">雨水回收槽</button>
+        </div>
+
+        <div class="content-box">
+            <h3 style="margin-top:0;">🎯 任務二：生態指標</h3>
+            <p>下列哪種生物出現，代表水質「乾淨」？</p>
+            <button class="quiz-btn" onclick="check(this,false)">紅蟲（搖蚊幼蟲）</button>
+            <button class="quiz-btn" onclick="check(this,true)">蜉蝣稚蟲</button>
+            <button class="quiz-btn" onclick="check(this,false)">管尾蟲</button>
+        </div>
+
+        <div class="content-box">
+            <h3 style="margin-top:0;">🎯 任務三：歷史記憶</h3>
+            <p>本園區大約在哪一年完成活化、轉型為生態公園？</p>
+            <button class="quiz-btn" onclick="check(this,false)">1998 年</button>
+            <button class="quiz-btn" onclick="check(this,true)">2008 年</button>
+            <button class="quiz-btn" onclick="check(this,false)">2018 年</button>
+        </div>
+
+        <div id="score" style="text-align:center; font-size:1.3em; font-weight:bold; color:#2e7d32; margin-top:30px;"></div>
+
+        <style>
+            .quiz-btn { margin: 6px 8px 6px 0; padding: 12px 22px; border: 2px solid #2e7d32; background: white; color: #2e7d32; border-radius: 6px; cursor: pointer; font-size: 1em; font-weight: bold; transition: 0.2s; }
+            .quiz-btn:hover { background: #e8f5e9; }
+            .quiz-btn.correct { background: #2e7d32; color: white; }
+            .quiz-btn.wrong { background: #c62828; color: white; border-color: #c62828; }
+            .quiz-btn:disabled { cursor: default; opacity: 0.85; }
+        </style>
+        <script>
+            let answered = 0, correct = 0;
+            function check(btn, isRight) {
+                const group = btn.parentElement;
+                if (group.dataset.done) return;
+                group.dataset.done = "1";
+                answered++;
+                group.querySelectorAll('.quiz-btn').forEach(b => b.disabled = true);
+                if (isRight) { btn.classList.add('correct'); correct++; }
+                else {
+                    btn.classList.add('wrong');
+                    group.querySelectorAll('.quiz-btn').forEach(b => {
+                        if (b.getAttribute('onclick').includes('true')) b.classList.add('correct');
+                    });
+                }
+                if (answered === 3) {
+                    document.getElementById('score').innerText =
+                        '🎉 完成！你答對 ' + correct + ' / 3 題' +
+                        (correct === 3 ? '　滿分！你是八德埤塘達人！' : '　再回顧各模組挑戰滿分吧！');
+                }
+            }
+        </script>
+        <a href="index.html" class="back-home">⬅ 回到首頁</a>
+    </main>
+    <footer>
+        <p>© 2026 八德埤塘生態研究小組</p>
+    </footer>
+</body>
+</html>

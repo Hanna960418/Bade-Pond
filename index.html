@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃園八德埤塘生態公園研究導覽網</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; line-height: 1.7; }
+        header { background-color: #2e7d32; color: white; text-align: center; padding: 2em 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 2em; letter-spacing: 1px; }
+
+        /* 統一導覽列 */
+        nav { background-color: #1b5e20; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li { position: relative; }
+        nav a { display: block; color: white; padding: 16px 22px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav a:hover { background-color: #4caf50; }
+        nav ul ul { display: none; position: absolute; background-color: #1b5e20; min-width: 180px; flex-direction: column; }
+        nav ul ul a { padding: 12px 20px; font-size: 0.95em; }
+        nav ul li:hover > ul { display: flex; }
+
+        main { max-width: 900px; margin: 40px auto; padding: 40px; background-color: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h2 { color: #2e7d32; border-bottom: 3px solid #81c784; padding-bottom: 10px; display: inline-block; }
+        .content-box { background-color: #e8f5e9; padding: 25px; border-left: 6px solid #2e7d32; border-radius: 4px; margin: 25px 0; }
+        .highlight { font-weight: bold; color: #1b5e20; }
+        .text-section { margin-bottom: 30px; }
+        .text-section h3 { color: #1b5e20; }
+        .quote-box { background-color: #f9f9f9; border-left: 4px solid #999; padding: 15px 20px; font-style: italic; color: #666; margin: 20px 0; }
+        footer { background-color: #1b5e20; color: white; text-align: center; padding: 20px 0; margin-top: 60px; }
+        a.back-home { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 4px; transition: 0.3s; }
+        a.back-home:hover { background-color: #1b5e20; }
+    </style>
+
+    <style>
+        header { padding: 4em 0; }
+        header h1 { font-size: 2.5em; letter-spacing: 2px; }
+        header p { margin: 15px 0 0 0; font-size: 1.2em; opacity: 0.9; }
+        main { max-width: 1100px; background: transparent; box-shadow: none; padding: 0 20px; }
+        .intro-text { text-align: center; margin-bottom: 40px; font-size: 1.1em; color: #555; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit; display: block; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-bottom: 4px solid #2e7d32; }
+        .card h3 { color: #2e7d32; font-size: 1.4em; margin-top: 0; }
+        .card p { color: #666; font-size: 0.95em; }
+        .icon { font-size: 3em; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌿 走進千塘之鄉：八德埤塘生態公園</h1>
+        <p>從傳統水利樞紐，蛻變為都市中的永續生態綠洲</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 關於本站</a></li>
+            <li><a href="pondMap.html">埤塘地圖</a></li>
+            <li><a href="hydrologySystem.html">地景與水利</a></li>
+            <li><a href="ecologicalSurvey.html">生態調查 ▼</a>
+                <ul>
+                    <li><a href="floraAndFauna.html">動植物紀錄</a></li>
+                    <li><a href="waterQualityIndicator.html">昆蟲與水質指標</a></li>
+                </ul>
+            </li>
+            <li><a href="historyCulture.html">歷史與文化</a></li>
+            <li><a href="environmentalChange.html">變遷與現狀</a></li>
+            <li><a href="interactiveGuide.html">互動任務</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="intro-text">
+            <p>歡迎來到八德埤塘生態公園導覽網。在這裡，我們將拆解八德埤塘的運作邏輯，帶您探索這片水域背後的自然生態與歷史人文。</p>
+            <p>請點擊下方導覽按鈕，開始您的線上導覽：</p>
+        </div>
+        <div class="card-grid">
+            <a href="pondMap.html" class="card"><div class="icon">🗺️</div><h3>埤塘地圖</h3><p>俯瞰園區水域配置與主要觀察點位置。</p></a>
+            <a href="hydrologySystem.html" class="card"><div class="icon">🌊</div><h3>地景與水利系統</h3><p>石門大圳的給水系統與層層相連的生態淨化池。</p></a>
+            <a href="historyCulture.html" class="card"><div class="icon">📜</div><h3>歷史與地方文化</h3><p>從違建國有地到生態公園，回顧本園區 2008 年活化重生的故事。</p></a>
+            <a href="ecologicalSurvey.html" class="card"><div class="icon">🔍</div><h3>生態調查總覽</h3><p>認識特有動植物以及昆蟲與水質指標。</p></a>
+            <a href="environmentalChange.html" class="card"><div class="icon">🏙️</div><h3>變遷與現狀</h3><p>從填平危機到活化重生，埤塘的過去與未來。</p></a>
+            <a href="interactiveGuide.html" class="card"><div class="icon">🎮</div><h3>互動導覽任務</h3><p>接受實地觀察挑戰，解鎖知識測驗。</p></a>
+        </div>
+    </main>
+    <footer>
+        <p>© 2026 八德埤塘生態研究小組</p>
+    </footer>
+</body>
+</html>

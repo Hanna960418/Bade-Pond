@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歷史與文化 - 八德埤塘導覽</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; line-height: 1.7; }
+        header { background-color: #2e7d32; color: white; text-align: center; padding: 2em 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 2em; letter-spacing: 1px; }
+
+        /* 統一導覽列 */
+        nav { background-color: #1b5e20; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li { position: relative; }
+        nav a { display: block; color: white; padding: 16px 22px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav a:hover { background-color: #4caf50; }
+        nav ul ul { display: none; position: absolute; background-color: #1b5e20; min-width: 180px; flex-direction: column; }
+        nav ul ul a { padding: 12px 20px; font-size: 0.95em; }
+        nav ul li:hover > ul { display: flex; }
+
+        main { max-width: 900px; margin: 40px auto; padding: 40px; background-color: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h2 { color: #2e7d32; border-bottom: 3px solid #81c784; padding-bottom: 10px; display: inline-block; }
+        .content-box { background-color: #e8f5e9; padding: 25px; border-left: 6px solid #2e7d32; border-radius: 4px; margin: 25px 0; }
+        .highlight { font-weight: bold; color: #1b5e20; }
+        .text-section { margin-bottom: 30px; }
+        .text-section h3 { color: #1b5e20; }
+        .quote-box { background-color: #f9f9f9; border-left: 4px solid #999; padding: 15px 20px; font-style: italic; color: #666; margin: 20px 0; }
+        footer { background-color: #1b5e20; color: white; text-align: center; padding: 20px 0; margin-top: 60px; }
+        a.back-home { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 4px; transition: 0.3s; }
+        a.back-home:hover { background-color: #1b5e20; }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>📜 歷史與文化</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 關於本站</a></li>
+            <li><a href="pondMap.html">埤塘地圖</a></li>
+            <li><a href="hydrologySystem.html">地景與水利</a></li>
+            <li><a href="ecologicalSurvey.html">生態調查 ▼</a>
+                <ul>
+                    <li><a href="floraAndFauna.html">動植物紀錄</a></li>
+                    <li><a href="waterQualityIndicator.html">昆蟲與水質指標</a></li>
+                </ul>
+            </li>
+            <li><a href="historyCulture.html">歷史與文化</a></li>
+            <li><a href="environmentalChange.html">變遷與現狀</a></li>
+            <li><a href="interactiveGuide.html">互動任務</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>從國有地到生態公園</h2>
+        <p>八德埤塘自然生態公園位於桃園市八德區興豐路旁，鄰近桃園榮民之家與國防大學，基地呈三角形，佔地約 5 公頃。它的故事，是一段「廢地重生」的都市更新記憶。</p>
+
+        <div class="text-section">
+            <h3>千塘之鄉的縮影</h3>
+            <p>桃園的埤塘，源自先民為發展農田水利而開鑿的灌溉調節設施。台地上星羅密布的數千口埤塘，形成獨特景觀，也讓桃園素有 <span class="highlight">「千塘之鄉」</span> 的美名。除了灌溉，埤塘還兼具景觀、休閒、生態、教育與防災滯洪等多重功能，本園區正是這項地方特色的縮影。</p>
+        </div>
+
+        <div class="content-box">
+            <h3 style="margin-top:0;">🏗️ 公園的誕生（民國95～97年）</h3>
+            <p>本園區基地在施工前，原貌是一片<b>違章建築林立的國有地</b>。由於基地內保有珍貴的<b>埤塘與老樹</b>等環境資源，桃園縣政府於<b>民國95年（2006年）</b>起，委託日本「象設計集團」以「自然生態」為核心概念進行設計。<br>
+            民國96年6月完成違章建築拆除清理後動工，並於 <span class="highlight">民國97年（2008年）7月完工啟用</span>，成為八德地區重要的大型生態休憩場域。</p>
+        </div>
+
+        <div class="quote-box">
+            「在公園誕生之前，這裡是雜亂的違建國有地；正因為園內留下了埤塘與老樹，才得以蛻變成今天兼顧生態與休憩的綠洲。」
+        </div>
+
+        <div class="text-section">
+            <h3>設計巧思：與自然對話</h3>
+            <p>園區設計處處可見對生態與永續的用心：透過<b>挖填方平衡</b>的地形改造減少廢土、保留場地內的<b>既有大樹</b>、規劃提供生物棲息的<b>「野鳥之島」</b>與多孔隙棲地，並採用自然通風採光的綠建築（如湖畔咖啡廳）。「森之散步道」串聯各種水岸場景，讓人在城市中也能親近自然。</p>
+        </div>
+
+        <a href="index.html" class="back-home">⬅ 回到首頁</a>
+    </main>
+    <footer>
+        <p>© 2026 八德埤塘生態研究小組</p>
+    </footer>
+</body>
+</html>

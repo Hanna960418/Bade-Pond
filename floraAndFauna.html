@@ -62,7 +62,9 @@
             nav ul { flex-wrap: wrap; }
             nav a { padding: 10px 12px; font-size: 0.9em; }
             /* 下拉子選單在手機改為直接展開、不用 hover */
-            nav ul ul { position: static; min-width: auto; }
+            nav ul ul { position: static; min-width: auto; display: flex; }
+            /* 手機：子選單直接展開，並縮排區隔 */
+            nav ul ul a { padding-left: 40px; background-color: #2e7d32; font-size: 0.85em; }
 
             /* 標題縮小 */
             header { padding: 1.5em 0; }
@@ -117,10 +119,10 @@
             • <span class="highlight">大白鷺：</span>體型最大的白鷺，頸長呈S型，黃色嘴喙、黑色腳趾。<br>
             • <span class="highlight">蒼鷺：</span>大型灰色鷺，頭白具黑色冠羽過眼線，常靜立淺水捕魚。<br>
             • <span class="highlight">夜鷺：</span>常佇立水邊靜待獵物，清晨黃昏最活躍。<br>
-	    • <span class="highlight">綠頭鴨：</span>常見大型水鴨,公鳥頭頸亮綠、有白頸環,母鳥為樸素褐色,是家鴨的祖先。</p>
+     • <span class="highlight">綠頭鴨：</span>常見大型水鴨,公鳥頭頸亮綠、有白頸環,母鳥為樸素褐色,是家鴨的祖先。</p>
         </div>
-	
-	<h3 style="color:#1b5e20;">📷 鳥類照片紀錄</h3>
+ 
+ <h3 style="color:#1b5e20;">📷 鳥類照片紀錄</h3>
         <div class="bird-grid">
             <div class="bird-card">
                 <img src="IMGs/大白鷺.jpg" alt="大白鷺">
